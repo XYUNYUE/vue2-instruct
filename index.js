@@ -140,7 +140,8 @@ function doubleClick(callBack, t = 1000, n = 2) {
 
 /**
  * 防抖函数 - 最后一次生效
- *  - 使用方法：注册后 v-jitter="options"
+ *  - 使用方法：注册后 v-jitter:event="options"
+ *    - event 事件名称。例如：click,input
  *    - options type Object
  *      - time : 回调时间( number / ms )，多久之后触发中间触发则会重新计算时间
  *      - function : 回调函数( function(e,params) )，等到时间到的时候则执行这个函数
@@ -174,7 +175,8 @@ export const VJitter = {
 
 /**
  * 节流函数 - 多久触发一次，中间触发则忽略
- *  - 使用方法：注册后 v-jitter="options"
+ *  - 使用方法：注册后 v-VThrottle:event="options"
+ *    - event 事件名称。例如：click,input
  *    - options type Object
  *      - time : 回调时间( number / ms )，多久之后触发中间触发则 忽略
  *      - function : 回调函数( function(e,params) )，等到时间到的时候则执行这个函数
@@ -210,6 +212,11 @@ export const VJitter = {
 
 /**
  * 移动端 - 长按指令
+ *  - 使用方法：注册后 v-VLongPress="options"
+ *    - options type Object
+ *      - time : 回调时间( number / ms )，多久之后触发中间触发则 忽略
+ *      - function : 回调函数( function(e,params) )，等到时间到的时候则执行这个函数
+ *      - params : 参数列表( Object ),等到回调函数执行的时候，会把这个参会传进去
  */
 export const VLongPress = {
   bind: function (el, binding) {
@@ -234,7 +241,8 @@ export const VLongPress = {
     el.$params = par;
     el._LongPress_ = _LongPress_;
     el._clear_ = _clear_;
-    // 禁止出现复制
+    
+    // 防止出现复制
     el.style["touch-callout"] = "none";
     el.style["-webkit-touch-callout"] = "none";
     el.style["-moz-touch-callout"] = "none";

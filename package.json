@@ -1,6 +1,6 @@
 {
   "name": "vue2-instruct",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This is a common VUE instruction package",
   "keywords": ["vue","instruct","vue2-instruct","vue-instruct"],
   "main": "index.js",
