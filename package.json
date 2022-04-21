@@ -2,11 +2,20 @@
   "name": "vue2-instruct",
   "version": "0.0.5",
   "description": "This is a common VUE instruction package",
-  "keywords": ["vue","instruct","vue2-instruct","vue-instruct"],
+  "keywords": [
+    "vue",
+    "instruct",
+    "vue2-instruct",
+    "vue-instruct"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:XYUNYUE/vue2-instruct.git"
+  }
 }
