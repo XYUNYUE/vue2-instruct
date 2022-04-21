@@ -52,7 +52,7 @@ npm install vue2-instruct
 
   <!-- 节流 -->
   Vue.directive('VThrottle', VThrottle);
-  <div v-VThrottle:click="{
+  <div v-VThrottle:event="{
       function:function(e,value,obj){console.log(e,value,obj)},
       time:1000,
       params:{
@@ -67,10 +67,31 @@ npm install vue2-instruct
 time | 防抖/节流的操作时间 | Number | 500/ms
 function | 回调函数(callback) | Function | function(e,value,obj){},e : 默认的事件对象，value : 当前元素的值(实验)，obj : 自定义传入的参数
 params | 回调函数的参数 | Object | null
-click | 事件类型 | String | click
+event | 事件类型。例如：click , input | String | click
 
 
 ---
+
+
+### 4. 长按指令
+```
+  import { VLongPress } from "vue2-instruct";
+
+  <!-- 防抖 -->
+  Vue.directive('VLongPress', VLongPress);
+  <input v-VLongPress="{
+    function:function(e,value,obj){console.log(e,value,obj)},
+    time:1000,
+    params:{
+      value:123
+    }
+  }"  type="text"/>
+```
+属性 | 说明 | 类型 | 默认值
+---|---|---|---
+time | 长按时间 | Number | 2000/ms
+function | 回调函数(callback) | Function | function(e,value,obj){},e : 默认的事件对象，value : 当前元素的值(实验)，obj : 自定义传入的参数
+params | 回调函数的参数 | Object | null
 
 
 # contact

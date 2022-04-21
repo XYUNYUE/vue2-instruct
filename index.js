@@ -242,11 +242,6 @@ export const VLongPress = {
     el._LongPress_ = _LongPress_;
     el._clear_ = _clear_;
     
-    // 防止出现复制
-    el.style["touch-callout"] = "none";
-    el.style["-webkit-touch-callout"] = "none";
-    el.style["-moz-touch-callout"] = "none";
-    el.style["-ms-touch-callout"] = "none";
   },
   componentUpdated(el, binding) {
     console.log(el, binding);
